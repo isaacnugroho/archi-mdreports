@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Archi Reports
+Bundle-SymbolicName: com.archicontribs.mdreports;singleton:=true
+Bundle-Version: 0.1.0.202303251206
+Bundle-Vendor: Archi
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Eclipse-BundleShape: dir
+Eclipse-ExtensibleAPI: true
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.ui,com.archimatetoo
+ l.editor,com.archimatetool.editor.browser
+Bundle-ClassPath: com.archicontribs.mdreports.jar,lib/ST-4.0.8.jar,lib/a
+ ntlr-runtime-4.4.jar
+Bundle-Activator: com.archicontribs.mdreports.ArchiMarkdownReportsPlugin
+Bundle-ActivationPolicy: lazy
+Export-Package: com.archicontribs.mdreports,com.archicontribs.mdreports.
+ html
+Import-Package: com.archimatetool.canvas,com.archimatetool.help
+Automatic-Module-Name: com.archicontribs.mdreports
+

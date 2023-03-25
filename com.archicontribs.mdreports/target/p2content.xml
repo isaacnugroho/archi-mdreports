@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='com.archicontribs.mdreports' version='0.1.0.202303251206' generation='2'>
+    <update id='com.archicontribs.mdreports' range='[0.0.0,0.1.0.202303251206)' severity='0'/>
+    <properties size='7'>
+      <property name='org.eclipse.equinox.p2.name' value='Archi Reports'/>
+      <property name='org.eclipse.equinox.p2.provider' value='Archi'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      <property name='maven-groupId' value='com.archicontribs'/>
+      <property name='maven-artifactId' value='com.archicontribs.mdreports'/>
+      <property name='maven-version' value='0.1.0-SNAPSHOT'/>
+      <property name='maven-type' value='eclipse-plugin'/>
+    </properties>
+    <provides size='6'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.archicontribs.mdreports' version='0.1.0.202303251206'/>
+      <provided namespace='osgi.bundle' name='com.archicontribs.mdreports' version='0.1.0.202303251206'/>
+      <provided namespace='java.package' name='com.archicontribs.mdreports' version='0.0.0'/>
+      <provided namespace='java.package' name='com.archicontribs.mdreports.html' version='0.0.0'/>
+      <provided namespace='osgi.identity' name='com.archicontribs.mdreports' version='0.1.0.202303251206'>
+        <properties size='1'>
+          <property name='type' value='osgi.bundle'/>
+        </properties>
+      </provided>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='7'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.archimatetool.editor' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.archimatetool.editor.browser' range='0.0.0'/>
+      <required namespace='java.package' name='com.archimatetool.canvas' range='0.0.0'/>
+      <required namespace='java.package' name='com.archimatetool.help' range='0.0.0'/>
+      <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=17))'>
+        <description>
+          com.archicontribs.mdreports
+        </description>
+      </requiredProperties>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='com.archicontribs.mdreports' version='0.1.0.202303251206'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='2'>
+        <instruction key='zipped'>
+          true
+        </instruction>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: com.archicontribs.mdreports;singleton:=true&#xA;Bundle-Version: 0.1.0.202303251206&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.archicontribs</groupId>
+  <artifactId>com.archicontribs.mdreports.parent</artifactId>
+  <version>${revision}</version>
+  <packaging>pom</packaging>
+
+  <name>Archi Markdown Reports</name>
+
+  <properties>
+    <revision>0.1.0-SNAPSHOT</revision>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <tycho.version>3.0.4</tycho.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>Eclipse Update Site</id>
+      <layout>p2</layout>
+      <url>https://download.eclipse.org/eclipse/updates/4.27</url>
+    </repository>
+  </repositories>
+
+  <modules>
+    <module>com.archicontribs.mdreports</module>
+    <module>com.archicontribs.mdreports.commandline</module>
+  </modules>
+
+  <!-- <profiles> -->
+  <!-- Profile for tests, active by default -->
+  <!-- <profile>
+<id>tests</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<modules>
+<module>tests</module>
+</modules>
+</profile> -->
+
+  <!-- Profile for creating a product build, not active by default -->
+  <!-- Use "mvn clean package -P product" to create products but not run tests -->
+  <!-- <profile>
+<id>product</id>
+<activation>
+<activeByDefault>false</activeByDefault>
+</activation>
+</profile> -->
+  <!-- </profiles> -->
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.eclipse.tycho</groupId>
+          <artifactId>tycho-p2-director-plugin</artifactId>
+          <version>${tycho.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-packaging-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <finalName>${project.artifactId}_${unqualifiedVersion}.${buildQualifier}</finalName>
+          <archive>
+            <addMavenDescriptor>false</addMavenDescriptor>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-compiler-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <useProjectSettings>false</useProjectSettings>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <environments>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>aarch64</arch>
+            </environment>
+          </environments>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

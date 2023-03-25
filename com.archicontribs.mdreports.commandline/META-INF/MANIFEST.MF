@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Archi Markdown Reports Command Line
+Bundle-SymbolicName: com.archicontribs.mdreports.commandline;singleton:=true
+Bundle-Localization: plugin
+Bundle-Version: 0.1.0.qualifier
+Bundle-Vendor: Archi
+Require-Bundle: com.archicontribs.mdreports,
+ com.archimatetool.commandline
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: com.archicontribs.mdreports.commandline

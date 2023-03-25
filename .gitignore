@@ -22,3 +22,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+.idea/
+bin/
+.settings/
+
+# Ignore Maven generated folders
+# Although it would be better to copy the source folders first and run Maven on the copy...
+# Which is what I do via an Ant script
+target/
+/workspace/
+
