@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='com.archicontribs.mdreports' version='0.1.0.202303251206' generation='2'>
-    <update id='com.archicontribs.mdreports' range='[0.0.0,0.1.0.202303251206)' severity='0'/>
+  <unit id='com.archicontribs.mdreports' version='0.1.0.202303251316' generation='2'>
+    <update id='com.archicontribs.mdreports' range='[0.0.0,0.1.0.202303251316)' severity='0'/>
     <properties size='7'>
-      <property name='org.eclipse.equinox.p2.name' value='Archi Reports'/>
+      <property name='org.eclipse.equinox.p2.name' value='Archi Markdown Reports'/>
       <property name='org.eclipse.equinox.p2.provider' value='Archi'/>
       <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
       <property name='maven-groupId' value='com.archicontribs'/>
@@ -12,11 +12,11 @@
       <property name='maven-type' value='eclipse-plugin'/>
     </properties>
     <provides size='6'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.archicontribs.mdreports' version='0.1.0.202303251206'/>
-      <provided namespace='osgi.bundle' name='com.archicontribs.mdreports' version='0.1.0.202303251206'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.archicontribs.mdreports' version='0.1.0.202303251316'/>
+      <provided namespace='osgi.bundle' name='com.archicontribs.mdreports' version='0.1.0.202303251316'/>
       <provided namespace='java.package' name='com.archicontribs.mdreports' version='0.0.0'/>
-      <provided namespace='java.package' name='com.archicontribs.mdreports.html' version='0.0.0'/>
-      <provided namespace='osgi.identity' name='com.archicontribs.mdreports' version='0.1.0.202303251206'>
+      <provided namespace='java.package' name='com.archicontribs.mdreports.markdown' version='0.0.0'/>
+      <provided namespace='osgi.identity' name='com.archicontribs.mdreports' version='0.1.0.202303251316'>
         <properties size='1'>
           <property name='type' value='osgi.bundle'/>
         </properties>
@@ -37,7 +37,7 @@
       </requiredProperties>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='com.archicontribs.mdreports' version='0.1.0.202303251206'/>
+      <artifact classifier='osgi.bundle' id='com.archicontribs.mdreports' version='0.1.0.202303251316'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
@@ -46,7 +46,7 @@
           true
         </instruction>
         <instruction key='manifest'>
-          Bundle-SymbolicName: com.archicontribs.mdreports;singleton:=true&#xA;Bundle-Version: 0.1.0.202303251206&#xA;
+          Bundle-SymbolicName: com.archicontribs.mdreports;singleton:=true&#xA;Bundle-Version: 0.1.0.202303251316&#xA;
         </instruction>
       </instructions>
     </touchpointData>

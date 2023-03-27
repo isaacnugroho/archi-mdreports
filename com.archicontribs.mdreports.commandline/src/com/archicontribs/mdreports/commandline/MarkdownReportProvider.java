@@ -14,11 +14,11 @@ import org.apache.commons.cli.Options;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.osgi.util.NLS;
 
+import com.archicontribs.mdreports.markdown.MarkdownReportExporter;
 import com.archimatetool.commandline.AbstractCommandLineProvider;
 import com.archimatetool.commandline.CommandLineState;
 import com.archimatetool.editor.utils.StringUtils;
 import com.archimatetool.model.IArchimateModel;
-import com.archicontribs.mdreports.html.MarkdownReportExporter;
 
 /**
  * Command Line interface for Markdown Reports
@@ -26,79 +26,79 @@ import com.archicontribs.mdreports.html.MarkdownReportExporter;
  * Typical usage - (should be all on one line):
  * 
  * Archi -consoleLog -nosplash -application com.archimatetool.commandline.app
-   --loadModel "/pathToModel/model.archimate"
-   --markdown.createReport "/pathToOutputFolder"
+ * --loadModel "/pathToModel/model.archimate"
+ * --markdown.createReport "/pathToOutputFolder"
  * 
  * @author Phillip Beauvoir
  */
 public class MarkdownReportProvider extends AbstractCommandLineProvider {
 
-    static final String PREFIX = Messages.MarkdownReportProvider_0;
-    
-    static final String OPTION_CREATE_MARKDOWN_REPORT = "markdown.createReport"; //$NON-NLS-1$
-    
-    public MarkdownReportProvider() {
-    }
-    
-    
-    @Override
-    public void run(CommandLine commandLine) throws Exception {
-        if(!hasCorrectOptions(commandLine)) {
-            return;
-        }
-        
-        String sOutput = commandLine.getOptionValue(OPTION_CREATE_MARKDOWN_REPORT);
-        if(!StringUtils.isSet(sOutput)) {
-            logError(Messages.MarkdownReportProvider_1);
-            return;
-        }
+  static final String PREFIX = Messages.MarkdownReportProvider_0;
 
-        File folderOutput = new File(sOutput);
-        folderOutput.mkdirs();
-        if(!folderOutput.exists()) {
-            logError(NLS.bind(Messages.MarkdownReportProvider_2, sOutput));
-            return;
-        }
+  static final String OPTION_CREATE_MARKDOWN_REPORT = "markdown.createReport"; //$NON-NLS-1$
 
-        IArchimateModel model = CommandLineState.getModel();
-        
-        if(model == null) {
-            throw new IOException(Messages.MarkdownReportProvider_3);
-        }
-        
-        logMessage(NLS.bind(Messages.MarkdownReportProvider_4, model.getName(), sOutput));
+  public MarkdownReportProvider() {
+  }
 
-        MarkdownReportExporter ex = new MarkdownReportExporter(model);
-        ex.createReport(folderOutput, "index.markdown", new NullProgressMonitor() { //$NON-NLS-1$
-            @Override
-            public void subTask(String name) {
-                logMessage(name);
-            }
-        });
+  @Override
+  public void run(CommandLine commandLine) throws Exception {
+    if (!hasCorrectOptions(commandLine)) {
+      return;
+    }
 
-        logMessage(Messages.MarkdownReportProvider_5);
+    String sOutput = commandLine.getOptionValue(OPTION_CREATE_MARKDOWN_REPORT);
+    if (!StringUtils.isSet(sOutput)) {
+      logError(Messages.MarkdownReportProvider_1);
+      return;
     }
-    
-    @Override
-    protected String getLogPrefix() {
-        return PREFIX;
+
+    File folderOutput = new File(sOutput);
+    folderOutput.mkdirs();
+    if (!folderOutput.exists()) {
+      logError(NLS.bind(Messages.MarkdownReportProvider_2, sOutput));
+      return;
     }
-    
-    @Override
-    public Options getOptions() {
-        Options options = new Options();
-        
-        Option option = Option.builder()
-                .longOpt(OPTION_CREATE_MARKDOWN_REPORT)
-                .hasArg().argName(Messages.MarkdownReportProvider_6)
-                .desc(Messages.MarkdownReportProvider_7)
-                .build();
-        options.addOption(option);
-        
-        return options;
+
+    IArchimateModel model = CommandLineState.getModel();
+
+    if (model == null) {
+      throw new IOException(Messages.MarkdownReportProvider_3);
     }
-    
-    private boolean hasCorrectOptions(CommandLine commandLine) {
-        return commandLine.hasOption(OPTION_CREATE_MARKDOWN_REPORT);
-    }
+
+    logMessage(NLS.bind(Messages.MarkdownReportProvider_4, model.getName(), sOutput));
+
+    MarkdownReportExporter ex = new MarkdownReportExporter(model);
+    ex.createReport(folderOutput, "index.markdown", new NullProgressMonitor() { //$NON-NLS-1$
+
+      @Override
+      public void subTask(String name) {
+        logMessage(name);
+      }
+    });
+
+    logMessage(Messages.MarkdownReportProvider_5);
+  }
+
+  @Override
+  protected String getLogPrefix() {
+    return PREFIX;
+  }
+
+  @Override
+  public Options getOptions() {
+    Options options = new Options();
+
+    Option option = Option.builder()
+        .longOpt(OPTION_CREATE_MARKDOWN_REPORT)
+        .hasArg().argName(Messages.MarkdownReportProvider_6)
+        .desc(Messages.MarkdownReportProvider_7)
+        .build();
+    options.addOption(option);
+
+    return options;
+  }
+
+  private boolean hasCorrectOptions(CommandLine commandLine) {
+    return commandLine.hasOption(OPTION_CREATE_MARKDOWN_REPORT);
+  }
 }

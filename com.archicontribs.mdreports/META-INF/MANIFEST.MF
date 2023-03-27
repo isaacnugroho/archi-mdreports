@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Archi Reports
+Bundle-Name: Archi Markdown Reports
 Bundle-SymbolicName: com.archicontribs.mdreports;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-Vendor: Archi
@@ -18,7 +18,7 @@ Bundle-ClassPath: com.archicontribs.mdreports.jar,
 Bundle-Activator: com.archicontribs.mdreports.ArchiMarkdownReportsPlugin
 Bundle-ActivationPolicy: lazy
 Export-Package: com.archicontribs.mdreports,
- com.archicontribs.mdreports.html
+ com.archicontribs.mdreports.markdown
 Import-Package: com.archimatetool.canvas,
  com.archimatetool.help
 Automatic-Module-Name: com.archicontribs.mdreports
