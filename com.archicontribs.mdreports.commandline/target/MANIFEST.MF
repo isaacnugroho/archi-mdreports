@@ -4,7 +4,7 @@ Bundle-Name: Archi Markdown Reports Command Line
 Bundle-SymbolicName: com.archicontribs.mdreports.commandline;singleton:=
  true
 Bundle-Localization: plugin
-Bundle-Version: 0.1.0.202303251316
+Bundle-Version: 0.1.0.202303270508
 Bundle-Vendor: Archi
 Require-Bundle: com.archicontribs.mdreports,com.archimatetool.commandlin
  e

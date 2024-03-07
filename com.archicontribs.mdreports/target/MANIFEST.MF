@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Archi Markdown Reports
 Bundle-SymbolicName: com.archicontribs.mdreports;singleton:=true
-Bundle-Version: 0.1.0.202303251316
+Bundle-Version: 0.1.0.202303270508
 Bundle-Vendor: Archi
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17

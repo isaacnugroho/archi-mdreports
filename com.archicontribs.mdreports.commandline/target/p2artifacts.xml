@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='com.archicontribs.mdreports.commandline' version='0.1.0.202303251316'>
+  <artifact classifier='osgi.bundle' id='com.archicontribs.mdreports.commandline' version='0.1.0.202303270508'>
     <properties size='6'>
-      <property name='artifact.size' value='5871'/>
-      <property name='download.size' value='5871'/>
+      <property name='artifact.size' value='5873'/>
+      <property name='download.size' value='5873'/>
       <property name='maven-groupId' value='com.archicontribs'/>
       <property name='maven-artifactId' value='com.archicontribs.mdreports.commandline'/>
       <property name='maven-version' value='0.1.0-SNAPSHOT'/>

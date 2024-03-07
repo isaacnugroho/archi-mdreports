@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='com.archicontribs.mdreports.commandline' version='0.1.0.202303251316' generation='2'>
-    <update id='com.archicontribs.mdreports.commandline' range='[0.0.0,0.1.0.202303251316)' severity='0'/>
+  <unit id='com.archicontribs.mdreports.commandline' version='0.1.0.202303270508' generation='2'>
+    <update id='com.archicontribs.mdreports.commandline' range='[0.0.0,0.1.0.202303270508)' severity='0'/>
     <properties size='7'>
       <property name='org.eclipse.equinox.p2.name' value='Archi Markdown Reports Command Line'/>
       <property name='org.eclipse.equinox.p2.provider' value='Archi'/>
@@ -12,9 +12,9 @@
       <property name='maven-type' value='eclipse-plugin'/>
     </properties>
     <provides size='4'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.archicontribs.mdreports.commandline' version='0.1.0.202303251316'/>
-      <provided namespace='osgi.bundle' name='com.archicontribs.mdreports.commandline' version='0.1.0.202303251316'/>
-      <provided namespace='osgi.identity' name='com.archicontribs.mdreports.commandline' version='0.1.0.202303251316'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.archicontribs.mdreports.commandline' version='0.1.0.202303270508'/>
+      <provided namespace='osgi.bundle' name='com.archicontribs.mdreports.commandline' version='0.1.0.202303270508'/>
+      <provided namespace='osgi.identity' name='com.archicontribs.mdreports.commandline' version='0.1.0.202303270508'>
         <properties size='1'>
           <property name='type' value='osgi.bundle'/>
         </properties>
@@ -31,13 +31,13 @@
       </requiredProperties>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='com.archicontribs.mdreports.commandline' version='0.1.0.202303251316'/>
+      <artifact classifier='osgi.bundle' id='com.archicontribs.mdreports.commandline' version='0.1.0.202303270508'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: com.archicontribs.mdreports.commandline;singleton:=true&#xA;Bundle-Version: 0.1.0.202303251316&#xA;
+          Bundle-SymbolicName: com.archicontribs.mdreports.commandline;singleton:=true&#xA;Bundle-Version: 0.1.0.202303270508&#xA;
         </instruction>
       </instructions>
     </touchpointData>
